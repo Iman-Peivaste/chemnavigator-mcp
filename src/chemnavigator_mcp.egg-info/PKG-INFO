@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: chemnavigator-mcp
+Version: 0.1.0
+Summary: MCP server for ChemNavigator photocatalyst design-rule discovery
+Author: ChemNavigator Contributors
+License: MIT
+Project-URL: Homepage, https://github.com/your-org/chemnavigator-mcp
+Project-URL: ChemNavigator, https://github.com/your-org/chemnavigator
+Keywords: mcp,photocatalyst,chemnavigator,dftb
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.2.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
 # ChemNavigator MCP Server
 
 MCP (Model Context Protocol) server that exposes the [ChemNavigator](https://github.com/your-org/chemnavigator) photocatalyst design-rule discovery framework to AI assistants (Cursor, Claude Desktop, etc.).
@@ -32,12 +47,8 @@ conda create -n chemnav python=3.10 -y
 conda activate chemnav
 
 # 3. Install ChemNavigator core + MCP server
-cd /path/to/chemnavigator
-pip install -r requirements.txt
-pip install -e .
-
-cd /path/to/chemnavigator-mcp
-pip install -e .
+pip install -e /path/to/chemnavigator
+pip install -e /path/to/chemnavigator-mcp
 
 # 4. Install DFTB+ into the same env (see ChemNavigator README)
 export GOOGLE_API_KEY="your-key"

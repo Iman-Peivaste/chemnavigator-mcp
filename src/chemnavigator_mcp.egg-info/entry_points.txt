@@ -1,0 +1,2 @@
+[console_scripts]
+chemnavigator-mcp = chemnavigator_mcp.server:main
